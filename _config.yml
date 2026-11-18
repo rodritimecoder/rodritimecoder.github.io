@@ -4,6 +4,7 @@ baseurl: ""
 url: ""
 
 # GitHub Pages runs Jekyll without a Gemfile build step.
+permalink: /posts/:title/
 highlighter: none
 markdown: kramdown
 
