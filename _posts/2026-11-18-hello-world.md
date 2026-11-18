@@ -27,4 +27,4 @@ design-pack check _site --json
 
 One is a static token gate. The other watches the page across seven viewports. Both treat a failure as a build error, not a suggestion.
 
-Try the [posts index]({{ site.baseurl }}/blog.html) — it is the same archive, counted.
+Try the [posts index]({{ site.baseurl }}/blog/) — it is the same archive, counted.
