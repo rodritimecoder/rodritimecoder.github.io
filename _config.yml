@@ -1,0 +1,13 @@
+title: The Terminal Notebook
+description: Deadpan notes on code, tools, and the machine.
+baseurl: ""
+url: ""
+
+# GitHub Pages runs Jekyll without a Gemfile build step.
+highlighter: none
+markdown: kramdown
+
+exclude:
+  - ALIGN.md
+  - README.md
+  - tools

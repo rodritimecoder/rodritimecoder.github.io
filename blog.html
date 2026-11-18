@@ -1,0 +1,49 @@
+---
+layout: default
+title: Posts
+---
+<section class="win site-panel">
+  <div class="win__bar">
+    <div class="win__dots">
+      <i class="win__dot win__dot--pink"></i>
+      <i class="win__dot win__dot--yellow"></i>
+      <i class="win__dot win__dot--mint"></i>
+    </div>
+    <span class="win__path">POSTS / INDEX</span>
+    <span class="win__chip chip--mint">✓ counted</span>
+  </div>
+  <div class="win__body">
+
+    <div class="board">
+      <div class="board__title">Board · the archive</div>
+      <div class="board__sub">A count, not a claim.</div>
+      <div class="cols">
+        <div class="col col--done"><span class="col__name">Posts</span><span class="col__n">{{ site.posts | size }}</span></div>
+        <div class="col col--todo"><span class="col__name">Drafts</span><span class="col__n">0</span></div>
+        <div class="col col--needs"><span class="col__name">Queued</span><span class="col__n">0</span></div>
+      </div>
+      <div class="progress-row">
+        <span class="progress-row__note">✓ indexed</span>
+        <div class="bar" aria-hidden="true">
+          <span class="bar__cell bar__cell--on"></span>
+          <span class="bar__cell bar__cell--on"></span>
+          <span class="bar__cell bar__cell--dim"></span>
+          <span class="bar__cell bar__cell--dim"></span>
+          <span class="bar__cell bar__cell--dim"></span>
+          <span class="bar__cell bar__cell--dim"></span>
+          <span class="bar__cell bar__cell--dim"></span>
+          <span class="bar__cell bar__cell--dim"></span>
+        </div>
+        <span class="progress-row__msg">{{ site.posts | size }} of {{ site.posts | size }} online</span>
+      </div>
+    </div>
+
+    <hr class="rule">
+    <div class="log">
+{% for post in site.posts %}
+      <p class="line post-line"><span class="bullet--yellow">●</span><a href="{{ post.url }}">{{ post.title }}</a></p>
+      <p class="line line--sm line--dim post-meta">{{ post.date_display }} — {{ post.summary }}</p>
+{% endfor %}
+    </div>
+  </div>
+</section>

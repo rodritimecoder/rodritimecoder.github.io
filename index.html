@@ -1,0 +1,25 @@
+---
+layout: default
+title: Index
+---
+<section class="win site-panel">
+  <div class="win__bar">
+    <div class="win__dots">
+      <i class="win__dot win__dot--pink"></i>
+      <i class="win__dot win__dot--yellow"></i>
+      <i class="win__dot win__dot--mint"></i>
+    </div>
+    <span class="win__path">LATEST TRANSMISSIONS</span>
+    <span class="win__chip chip--mint">● live</span>
+  </div>
+  <div class="win__body">
+    <div class="log">
+      <p class="line line--dim">A small archive. One post at a time.</p>
+{% for post in site.posts %}
+      <p class="line post-line"><span class="num--yellow">●</span><a href="{{ post.url }}">{{ post.title }}</a></p>
+      <p class="line line--sm line--dim post-meta">{{ post.date_display }} — {{ post.summary }}</p>
+{% endfor %}
+    </div>
+    <p class="line line--sm"><a href="{{ site.baseurl }}/blog.html">→ full index</a></p>
+  </div>
+</section>

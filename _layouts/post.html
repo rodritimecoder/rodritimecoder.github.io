@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="win site-panel">
+  <div class="win__bar">
+    <div class="win__dots">
+      <i class="win__dot win__dot--pink"></i>
+      <i class="win__dot win__dot--yellow"></i>
+      <i class="win__dot win__dot--mint"></i>
+    </div>
+    <span class="win__path">{{ page.url }}</span>
+    <span class="win__chip chip--coral">POST</span>
+  </div>
+  <div class="win__body">
+    <div class="log">
+      <p class="line line--cmd">{{ page.title }}</p>
+      <p class="line line--sm line--dim">{{ page.date_display }}</p>
+    </div>
+    <hr class="rule rule--heavy">
+    <article class="prose">{{ content }}</article>
+    <hr class="rule rule--heavy">
+    <p class="line line--sm"><a href="{{ site.baseurl }}/blog.html">← all posts</a></p>
+  </div>
+</section>

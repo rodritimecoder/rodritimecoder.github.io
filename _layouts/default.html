@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page.title }} · {{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/favicon.svg">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tokens.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="win win--paper site-head">
+    <div class="win__bar">
+      <div class="win__dots">
+        <i class="win__dot win__dot--pink"></i>
+        <i class="win__dot win__dot--yellow"></i>
+        <i class="win__dot win__dot--mint"></i>
+      </div>
+      <span class="win__path">~/blog{{ page.url }}</span>
+      <span class="win__chip">● online</span>
+    </div>
+    <div class="win__body">
+      <div class="log">
+        <p class="line line--cmd">&gt; {{ site.title }}</p>
+        <p class="line line--tree">└ {{ site.description }}</p>
+      </div>
+      <nav class="keybar" aria-label="site navigation">
+        <span><b class="keybar__k">1</b><a href="{{ site.baseurl }}/">Index</a></span>
+        <span><b class="keybar__k">2</b><a href="{{ site.baseurl }}/blog.html">Posts</a></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">{{ content }}</main>
+
+  <footer class="win__foot site-foot">
+    rendered by jekyll · dressed in glitch-console · every colour from the token sheet
+  </footer>
+
+</div>
+</body>
+</html>
